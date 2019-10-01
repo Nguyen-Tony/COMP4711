@@ -2,67 +2,25 @@
 <html>
 	<head>
 		<link rel='stylesheet' type='text/css' href='Styles/stylesheet.css'/>
+		
 	</head>
-	<div class="table">
+	<script src="myScript.js"></script>
+	<div class="header">
 		<h1>Artist Directory</h1>
-		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-
-		<ul id="myUL">
-			<li>
-				<a href="#">
-				<div class="profile">
-					<div>
-						<img src="https://randomuser.me/api/portraits/med/men/1.jpg">
-					</div>
-					<h4>Barot Bellingham</h4>
-					<p class="desc">Royal Academy of Painting and Sculpture</p>
-				</div>
-				</a>	
-			</li>
-			<li>
-				<a href="#">
-				<div class="profile">
-					<div>
-						<img src="https://randomuser.me/api/portraits/med/men/2.jpg">
-					</div>
-					<h4>Jonathan G. Ferrar II</h4>
-					<p class="desc">Artist to Watch 2012</p>
-				</div>
-				</a>	
-			</li>
-			<li>
-				<a href="#">
-				<div class="profile">
-					<div>
-						<img src="https://randomuser.me/api/portraits/med/women/2.jpg">
-					</div>
-					<h4>Hillary Hewitt Goldwinn-Post</h4>
-					<p class="desc">New york University</p>
-				</div>
-				</a>	
-			</li>
-			<li>
-				<a href="#">
-				<div class="profile">
-					<div>
-						<img src="https://randomuser.me/api/portraits/med/men/3.jpg">
-					</div>
-					<h4>Hassum Harrod</h4>
-					<p class="desc">Art College in New Dehli</p>
-				</div>
-				</a>	
-			</li>
-			<li>
-				<a href="#">
-				<div class="profile">
-					<div>
-						<img src="https://randomuser.me/api/portraits/med/women/1.jpg">
-					</div>
-					<h4>Jennifer Jerome</h4>
-					<p class="desc">Royal Academy of Painting and Sculpture</p>
-				</div>
-				</a>	
-			</li>
-		</ul>
+		<input type="text" id="myInput">
+		<span onclick="openForm()" class="addBtn">Add artist</span>
 	</div>
+		<ul id="myUL">
+		
+	</ul>
+	<div class="form-popup" id="myForm">
+		<form action="/action_page.php" class="form-container">
+			<input type="text" id="artistName" placeholder="Artist Name" name="name" maxlength = "40" required>
+			<input type="text" id="artistDesc" placeholder="About artist" name="description" maxlength = "40" required>
+			<input type="text" id="imgURL" placeholder="Image url" name="image" required>
+			<span onclick="newElement()" type="submit" class="addBtn">Add</button></div>
+		</form>
+	</div>
+	
+
 </html>
