@@ -4,23 +4,22 @@
 		<link rel='stylesheet' type='text/css' href='Styles/stylesheet.css'/>
 		
 	</head>
-	<script src="myScript.js"></script>
 	<div class="header">
 		<h1>Artist Directory</h1>
-		<input type="text" id="myInput">
-		<span onclick="openForm()" class="addBtn">Add artist</span>
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">		
+		<span onclick="expandForm()" class="addBtn">Add artist</span>
 	</div>
 		<ul id="myUL">
-		
-	</ul>
+		</ul>
 	<div class="form-popup" id="myForm">
 		<form action="/action_page.php" class="form-container">
-			<input type="text" id="artistName" placeholder="Artist Name" name="name" maxlength = "40" required>
+			<input type="text" id="artistName" placeholder="Artist Name" maxlength = "40" required />
 			<input type="text" id="artistDesc" placeholder="About artist" name="description" maxlength = "40" required>
 			<input type="text" id="imgURL" placeholder="Image url" name="image" required>
-			<span onclick="newElement()" type="submit" class="addBtn">Add</button></div>
+			<span type="submit" onclick="addArtist()" class="addBtn">Add</button>
 		</form>
 	</div>
-	
+	<script src="myScript.js"></script>
+
 
 </html>
