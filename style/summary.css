@@ -1,0 +1,11 @@
+h2 {
+	text-align: center;
+}
+#summaryDiv {
+  text-align: center;
+  border: 3px solid rgb(0, 115, 153);
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}

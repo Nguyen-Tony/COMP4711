@@ -1,0 +1,64 @@
+.box {
+ width: 100px;
+ height: 100px;
+ padding: 10px;
+ -o-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -ms-box-sizing: border-box;
+ box-sizing: border-box;
+ display: inline-block;
+ border: 5px solid #fff;
+ background-color:rgb(0, 115, 153);
+}
+
+
+
+.box.turn {
+	transform: rotateX(180deg);
+}
+
+html, body {
+	height: 100%;
+}
+
+html {
+   display: table;
+   margin: auto;
+}
+
+body {
+   display: table-cell;
+   vertical-align: middle;
+}
+
+
+#board {
+ font-size:0;
+}
+
+
+.spinBoard {
+  animation: spin 1.0s linear;
+  transform: rotate(90deg); 
+}
+
+.clickRight {
+  background-color: green;
+  transform: rotateY(180deg);
+  transition: transform 1s, background-color 2s;
+}
+
+.clickWrong {
+  background-color: red;
+  transform: rotateY(180deg);
+  transition: transform 1s, background-color 2s;
+}
+
+.return {
+  background-color:rgb(0, 115, 153);
+  transform: rotateY(0deg);
+  transition: transform 1s, background-color 0.75s;
+}
+
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); } 50% { -webkit-transform: rotate(90deg); } }

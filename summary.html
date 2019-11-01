@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<link rel="stylesheet" type="text/css" href="style/memoryGame.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
+	<link rel="stylesheet" type="text/css" href="style/summary.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<title>Memory Game</title>
+	
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<title>Summary Page</title>
 
 </head>
 <body>
-	<audio id="soundEffect">
-		<source src="sounds/background.mp3" type="audio/mpeg">
-	</audio>
 	<audio id="loseSound">
 		<source src="sounds/lose.mp3" type="audio/mpeg">
 	</audio>
-	<audio id="rightSound">
-		<source src="sounds/right.mp3" type="audio/mpeg">
-	</audio>
-	<audio id="wrongSound">
-		<source src="sounds/wrong.mp3" type="audio/mpeg">
-	</audio>
-	<audio id="levelUpSound">
-		<source src="sounds/levelUp.mp3" type="audio/mpeg">
-	</audio>
-	<h1>Memory Game</h1>
-	<h3 id="tiles">Tiles: 3</h3>
-	<h3 id="trial">Trial: 1</h3>
-	<h3 id="score">Score: 0</h3>
-	<br>
+	<h2> Summary Page</h2>
 
-	<div id="board" class="memory-game">
-		
+	<div id="summaryDiv">
+		<form action="/" method="post">
+			<h4 id="currentScore"> Your Score: </h4>
+			<label for="formGroupExampleInput">Enter your name:</label>
+			<input type="text" class="form-control" id="nameInput" name="userIdentity" placeholder="">
+			<input type="hidden" id="hiddenScore" name="hScore">
+			<br>
+		</form>
+
+		<button class="btn btn-primary" onclick=submit()>Submit</button>
+
+	
+		<button class="btn btn-outline-info" onclick=playAgain()>RESTART</button>
 	</div>
-	<br>
-	<button class="btn btn-outline-danger" onclick=closeGame()>Terminate</button>
-
-	<script src="js/memoryGame.js"></script>
+	<script src="js/summary.js"></script>
 </body>
 </html>
