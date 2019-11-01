@@ -17,7 +17,7 @@ function playAgain() {
 }
 
 function submit() {
-	window.location = 'leaderboard.html';
+	window.location = 'leaderBoard.html';
 }
 
 window.onload = function() {
